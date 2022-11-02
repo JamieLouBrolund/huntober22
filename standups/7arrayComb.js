@@ -24,7 +24,6 @@
 //r: number of unique arrays that can be formed by picking exactly one element from each subarray.
 
 function solve(arr){
-    //map through arr
-    let newArr = arr.map(n => n.Set(n))
+    let newArr = arr.map(n => new Set(n).size)
     return newArr.reduce((n,c) => n * c, 1)
 }
