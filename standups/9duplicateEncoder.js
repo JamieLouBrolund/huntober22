@@ -15,3 +15,13 @@
 //https://www.codewars.com/kata/54b42f9314d9229fd6000d9c/javascript
 //
 //Hint: map through array checking if indexof == lastindexof and return the appropriate character
+
+function duplicateEncode(word){
+    //convert all to lowercase and split
+    return word.toLowerCase().split('')
+    //map through to see match
+    .map( function (a,i,w){
+        return w.indexOf(a) === w.lastIndexOf(a) ? '(' : ')'
+    })
+    .join('')
+}
